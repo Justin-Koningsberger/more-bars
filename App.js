@@ -7,86 +7,186 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const barColors = ['rgba(32,81,21,.1)', '#73CB12', '#A2FF00', '#237221'];
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.ours}>
-        <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>Test from TestApp</Text>
-          <View style={styles.square} />
-          <Text style={styles.sectionDescription}>
-            <DebugInstructions />
-          </Text>
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView style={styles.body}>
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}>More Bars</Text>
+        </View>
+
+        <View style={styles.barsContainer}>
+          <LinearGradient colors={barColors} style={styles.barOne} />
+          <LinearGradient colors={barColors} style={styles.barTwo} />
+          <LinearGradient colors={barColors} style={styles.barThree} />
+          <LinearGradient colors={barColors} style={styles.barFour} />
+          <LinearGradient colors={barColors} style={styles.barFive} />
+          <LinearGradient colors={barColors} style={styles.barSix} />
+          <LinearGradient colors={barColors} style={styles.barSeven} />
+          <LinearGradient colors={barColors} style={styles.barEight} />
+          <LinearGradient colors={barColors} style={styles.barNine} />
+          <LinearGradient colors={barColors} style={styles.barTen} />
         </View>
       </SafeAreaView>
     </>
   );
 };
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
+/*
+const barStyle = (n, s = 80, b = 20) => {
+  return {
+    bottom: 300,
+    left: 20,
     position: 'absolute',
-    right: 0,
-  },
+    width: s,
+    height: s,
+    zIndex: -n,
+    backgroundColor: '#12e474',
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: b,
+    borderRadius: s / 2,
+  };
+};
+*/
+
+const styles = StyleSheet.create({
   body: {
-    backgroundColor: Colors.white,
-  },
-  ours: {
-    backgroundColor: Colors.black,
+    backgroundColor: 'rgba(50,32,84,1)',
     flex: 1,
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-    backgroundColor: Colors.dark,
+  header: {
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(0,0,0,.2)',
   },
-  sectionTitle: {
+  headerTitle: {
     fontSize: 24,
-    fontWeight: '600',
-    color: Colors.red,
+    fontWeight: '200',
+    letterSpacing: 4,
+    paddingVertical: 6,
+    paddingHorizontal: 20,
+    paddingBottom: 6,
+    color: '#ffffff',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+  barsContainer: {
+    display: 'flex',
+    flex: 1,
   },
-  square: {
-    width: 30,
-    height: 100,
-    backgroundColor: "red",
+  barOne: {
+    width: 80,
+    height: 80,
+    position: 'absolute',
+    zIndex: -1,
+    bottom: 300,
+    left: 20,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 100,
   },
-  highlight: {
-    fontWeight: '700',
+  barTwo: {
+    width: 150,
+    height: 150,
+    position: 'absolute',
+    zIndex: -2,
+    bottom: 265,
+    left: -15,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 75,
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  barThree: {
+    width: 220,
+    height: 220,
+    position: 'absolute',
+    zIndex: -3,
+    bottom: 230,
+    left: -50,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 110,
+  },
+  barFour: {
+    width: 290,
+    height: 290,
+    position: 'absolute',
+    zIndex: -4,
+    bottom: 195,
+    left: -85,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 145,
+  },
+  barFive: {
+    width: 360,
+    height: 360,
+    position: 'absolute',
+    zIndex: -5,
+    bottom: 160,
+    left: -120,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 180,
+  },
+  barSix: {
+    width: 430,
+    height: 430,
+    position: 'absolute',
+    zIndex: -6,
+    bottom: 125,
+    left: -155,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 215,
+  },
+  barSeven: {
+    width: 500,
+    height: 500,
+    position: 'absolute',
+    zIndex: -7,
+    bottom: 90,
+    left: -190,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 250,
+  },
+  barEight: {
+    width: 570,
+    height: 570,
+    position: 'absolute',
+    zIndex: -8,
+    bottom: 55,
+    left: -225,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 285,
+  },
+  barNine: {
+    width: 640,
+    height: 640,
+    position: 'absolute',
+    zIndex: -9,
+    bottom: 20,
+    left: -260,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 320,
+  },
+  barTen: {
+    width: 710,
+    height: 710,
+    position: 'absolute',
+    zIndex: -10,
+    bottom: -15,
+    left: -295,
+    borderColor: 'rgba(50,32,84,1)',
+    borderWidth: 20,
+    borderRadius: 355,
+    opacity: 0.1,
   },
 });
 
