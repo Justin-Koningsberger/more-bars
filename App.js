@@ -8,6 +8,9 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+
+const barColors = ['rgba(32,81,21,.1)', '#73CB12', '#A2FF00', '#237221'];
 
 const App: () => React$Node = () => {
   return (
@@ -19,16 +22,16 @@ const App: () => React$Node = () => {
         </View>
 
         <View style={styles.barsContainer}>
-          <View style={styles.barOne} />
-          <View style={styles.barTwo} />
-          <View style={styles.barThree} />
-          <View style={styles.barFour} />
-          <View style={styles.barFive} />
-          <View style={styles.barSix} />
-          <View style={styles.barSeven} />
-          <View style={styles.barEight} />
-          <View style={styles.barNine} />
-          <View style={styles.barTen} />
+          <LinearGradient colors={barColors} style={styles.barOne} />
+          <LinearGradient colors={barColors} style={styles.barTwo} />
+          <LinearGradient colors={barColors} style={styles.barThree} />
+          <LinearGradient colors={barColors} style={styles.barFour} />
+          <LinearGradient colors={barColors} style={styles.barFive} />
+          <LinearGradient colors={barColors} style={styles.barSix} />
+          <LinearGradient colors={barColors} style={styles.barSeven} />
+          <LinearGradient colors={barColors} style={styles.barEight} />
+          <LinearGradient colors={barColors} style={styles.barNine} />
+          <LinearGradient colors={barColors} style={styles.barTen} />
         </View>
       </SafeAreaView>
     </>
@@ -81,7 +84,6 @@ const styles = StyleSheet.create({
     zIndex: -1,
     bottom: 300,
     left: 20,
-    backgroundColor: '#12e474',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 100,
@@ -93,7 +95,6 @@ const styles = StyleSheet.create({
     zIndex: -2,
     bottom: 265,
     left: -15,
-    backgroundColor: 'rgba(135,219,45,1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 75,
@@ -105,7 +106,6 @@ const styles = StyleSheet.create({
     zIndex: -3,
     bottom: 230,
     left: -50,
-    backgroundColor: 'rgba(135,219,45,1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 110,
@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
     zIndex: -4,
     bottom: 195,
     left: -85,
-    backgroundColor: 'rgba(135,219,45,1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 145,
@@ -129,7 +128,6 @@ const styles = StyleSheet.create({
     zIndex: -5,
     bottom: 160,
     left: -120,
-    backgroundColor: 'rgba(135,219,45,1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 180,
@@ -141,7 +139,6 @@ const styles = StyleSheet.create({
     zIndex: -6,
     bottom: 125,
     left: -155,
-    backgroundColor: 'rgba(135,219,45,.5)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 215,
@@ -153,7 +150,6 @@ const styles = StyleSheet.create({
     zIndex: -7,
     bottom: 90,
     left: -190,
-    backgroundColor: 'rgba(135,219,45,.2)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 250,
@@ -165,7 +161,6 @@ const styles = StyleSheet.create({
     zIndex: -8,
     bottom: 55,
     left: -225,
-    backgroundColor: 'rgba(135,219,45,.1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 285,
@@ -177,7 +172,6 @@ const styles = StyleSheet.create({
     zIndex: -9,
     bottom: 20,
     left: -260,
-    backgroundColor: 'rgba(135,219,45,.1)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 320,
@@ -189,10 +183,10 @@ const styles = StyleSheet.create({
     zIndex: -10,
     bottom: -15,
     left: -295,
-    backgroundColor: 'rgba(135,219,45,.05)',
     borderColor: 'rgba(50,32,84,1)',
     borderWidth: 20,
     borderRadius: 355,
+    opacity: 0.1,
   },
 });
 
